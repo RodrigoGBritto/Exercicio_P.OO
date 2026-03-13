@@ -4,17 +4,41 @@ import funcoes.entidades.Exercicio00;
 
 import java.util.Scanner;
 
-public class App {
-    //exercicio 127
+public class
+App {
+
     static void main() {
         Exercicio00 exemplo = new Exercicio00();
         Scanner entrada = new Scanner(System.in);
         System.out.println("--------Sejam bem vindos ao Nosso Curso de POO----------:");
         System.out.println("Qual Função você deseja executar?");
-        System.out.println("125 -- 127 -- 128 -- 129 --130?");
+        System.out.println("01 -- 02 -- 03 -- 04 -- 125 -- 127 -- 128 -- 129 --130?");
         int escolha;
         escolha = entrada.nextInt();
         switch (escolha) {
+            case 01:
+                System.out.println("Aló Mundo! ");
+                exemplo.aloMundo();
+                break;
+
+            case 02:
+                System.out.println("Digite um numero inteiro:");
+                int numero = entrada.nextInt();
+                exemplo.mostrarNumeroInteiro(numero);
+                break;
+
+            case 03:
+                System.out.println("Digite um numero real:");
+                float numeroReal = entrada.nextFloat();
+                exemplo.mostrarNumeroReal(numeroReal);
+                break;
+
+            case 04:
+                System.out.println("Digite um nome:");
+                String nome = entrada.next();
+                exemplo.mostrarNome(nome);
+                break;
+
             case 125:
                 System.out.println("Voce Escolheu a Funcao maior de dois numeros!!!");
                 System.out.println("Entre com primeiro valor:");
@@ -45,7 +69,7 @@ public class App {
                 break;
             default:
                 System.out.println("Digite uma escolha valida");
-                System.out.println("125 -- 127 -- 128 -- 129 --130?");
+                System.out.println("01 -- 02 -- 03 -- 04 -- 125 -- 127 -- 128 -- 129 --130?");
         }
 
     }
